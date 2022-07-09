@@ -1,9 +1,6 @@
 pipeline {
  
     agent any
-    tools {
-		maven "3.8.6"
-    }
     environment{
         VERSION = "${env.BUILD_ID}"
         IMAGE_NAME = "devopstrainingschool/java-maven2"
@@ -13,17 +10,17 @@ pipeline {
         stage('maven Clean'){
 
                   steps{
+                      sh "ls"
                       
-                      
-		                  sh "mvn clean install"
+		                 # sh "mvn clean install"
                   }
                 }  
         stage('maven Build'){
 
                   steps{
                       
-                      
-		                  sh "mvn package"
+                      sh "pwd"
+		                 # sh "mvn package"
                   }
                 }      
     
