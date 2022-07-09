@@ -1,7 +1,7 @@
 pipeline {
  
     agent any
-	tools {
+    tools {
 		maven "3.8.6"
     environment{
         VERSION = "${env.BUILD_ID}"
