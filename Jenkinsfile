@@ -1,10 +1,10 @@
 pipeline {
  
-    agent { label 'node1' }
+    agent any
    
     environment{
         VERSION = "${env.BUILD_ID}"
-        IMAGE_NAME = "yannickeboo/parker"
+        IMAGE_NAME = "devopstrainingschool/java-maven2"
     }
     stages {
        
