@@ -1,7 +1,10 @@
 pipeline {
  
     agent any
-   
+    tools {
+	    maven
+	    jdk
+		
     environment{
         VERSION = "${env.BUILD_ID}"
         IMAGE_NAME = "devopstrainingschool/java-maven2"
