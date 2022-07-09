@@ -8,7 +8,7 @@ pipeline {
     stages {
        
         stage('maven Clean'){
-
+                  def mvnHome = tool name: 'Apache Maven 3.8.6', type: 'maven'
                   steps{
                       sh "mvnw clean"
                       
