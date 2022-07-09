@@ -10,7 +10,7 @@ pipeline {
         stage('maven Clean'){
 
                   steps{
-                      sh "ls"
+                      sh "mvn clean"
                       
 		                
                   }
@@ -19,7 +19,7 @@ pipeline {
 
                   steps{
                       
-                      sh "pwd"
+                      sh "mvn package"
 		               
                   }
                 }      
