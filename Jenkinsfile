@@ -6,7 +6,7 @@ pipeline {
     }
     environment{
         VERSION = "${env.BUILD_ID}"
-        IMAGE_NAME = "devopstrainingschool/parker"
+        IMAGE_NAME = "devopstrainingschool/java-maven"
     }
     stages {
         stage('clean') {
