@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('clean') {
             steps {
               
                 
@@ -17,7 +17,7 @@ pipeline {
 
             
         }
-      stage('Build') {
+        stage('Build') {
             steps {
               
                 
