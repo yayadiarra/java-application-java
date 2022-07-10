@@ -1,31 +1,24 @@
 pipeline {
- 
     agent any
+
     tools {
-	maven '3.8.6'
-    environment{
-        VERSION = "${env.BUILD_ID}"
-        IMAGE_NAME = "devopstrainingschool/java-maven2"
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "3.8.6"
     }
+
     stages {
-       
-        stage('maven Clean'){
-                 
-                  steps{
-                     
-	    
-            sh "mvn clean"
-        
-		  }
-                }  
-        stage('maven build'){
-                 
-                  steps{
-                      
-            sh "mvn package"
-        
-		  }
-                } 
-    
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+
+            
+        }
     }
 }
