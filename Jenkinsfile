@@ -6,7 +6,7 @@ pipeline {
     }
     environment{
         VERSION = "${env.BUILD_ID}"
-        IMAGE_NAME = "yannickeboo/parker"
+        IMAGE_NAME = "devopstrainingschool/parker"
     }
     stages {
         stage('clean') {
