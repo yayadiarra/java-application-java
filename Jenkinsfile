@@ -11,12 +11,12 @@ pipeline {
                  
                   steps{
                       withMaven(maven: 'mvn') {
-	    sh " mvn -version"
+	    
             sh "mvn clean"
         }
 		  }
                 }  
-        stage('maven Clean'){
+        stage('maven build'){
                  
                   steps{
                       withMaven(maven: 'mvn') {
