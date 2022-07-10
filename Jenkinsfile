@@ -49,12 +49,7 @@ pipeline {
 
                 }  
             }
-               
-
-            }
-
-            
-        }
+              
        stage('docker image') {
       
       steps {
