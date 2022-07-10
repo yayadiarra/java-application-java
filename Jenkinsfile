@@ -4,7 +4,10 @@ pipeline {
     tools {
         maven "Yannick"
     }
-
+    environment{
+        VERSION = "${env.BUILD_ID}"
+        IMAGE_NAME = "yannickeboo/parker"
+    }
     stages {
         stage('clean') {
             steps {
